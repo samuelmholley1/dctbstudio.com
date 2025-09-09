@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -91,7 +91,7 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <blockquote className="text-lg italic text-gray-700 font-serif mb-4">
-            "When you have balance in your home, you feel long, well, but more at home."
+            &ldquo;When you have balance in your home, you feel long, well, but more at home.&rdquo;
           </blockquote>
           <cite className="text-sm italic font-serif text-gray-600">
             — DCTB Client
@@ -116,42 +116,7 @@ export default function Home() {
       {/* Contact Form */}
       <section className="py-16 px-4">
         <div className="max-w-lg mx-auto">
-          <form className="space-y-4">
-            <div>
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-3 border border-black text-sm"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-3 border border-black text-sm"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full p-3 border border-black text-sm"
-              />
-            </div>
-            <div>
-              <textarea
-                placeholder="Type your message here..."
-                rows={6}
-                className="w-full p-3 border border-black text-sm resize-none"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-3 uppercase font-bold text-sm hover:bg-gray-800 transition-colors"
-            >
-              Submit
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
