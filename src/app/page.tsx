@@ -3,12 +3,6 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Wix Banner */}
-      <div className="bg-gray-100 text-center py-2 px-4 text-sm">
-        This site was designed with the Wix.com website builder. Create your website today.{" "}
-        <span className="text-blue-600 underline cursor-pointer">Start Now</span>
-      </div>
-
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-4 py-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
