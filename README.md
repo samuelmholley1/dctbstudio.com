@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Design Consultants of Tampa Bay
 
-## Getting Started
+A modern, responsive website for Design Consultants of Tampa Bay (DCTB), an interior design company specializing in creating elegant interiors.
 
-First, run the development server:
+## 🏠 About DCTB
+
+Design Consultants of Tampa Bay offers:
+- Full service interior design
+- High quality interior products available for purchase
+- Custom designed interiors
+- Unique finishes
+- Budget-conscious solutions
+
+### Personal Design Services:
+- Custom furniture design
+- Hand painted finishes
+- Window treatments
+- Accessories and accents
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 15.5.2 with App Router
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Package Manager**: Yarn Berry (v4.9.4) with node-modules linker
+- **Font**: Helvetica Neue/Arial (sans-serif) + Times New Roman (serif headings)
+
+## 📱 Features
+
+- ✅ Pixel-perfect recreation of original Wix design
+- ✅ Fully responsive design (mobile & desktop)
+- ✅ SEO optimized with proper metadata
+- ✅ Contact form with proper styling
+- ✅ Client testimonial section
+- ✅ Professional typography (serif/sans-serif combination)
+- ✅ Image placeholders ready for actual photos
+- ✅ Accessible navigation and form elements
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Yarn Berry
+
+### Installation
 
 ```bash
-npm run dev
-# or
+# Clone the repository
+git clone https://github.com/samuelmholley1/dctbstudio.com.git
+cd dctbstudio.com
+
+# Install dependencies
+yarn install
+
+# Start development server
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Development server
+yarn dev
 
-## Learn More
+# Production build
+yarn build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+yarn start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Lint code
+yarn lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📋 TODO
 
-## Deploy on Vercel
+- [ ] Replace image placeholders with actual DCTB photos
+- [ ] Add image optimization and proper alt text
+- [ ] Implement contact form submission
+- [ ] Add Google Analytics
+- [ ] Set up contact form backend
+- [ ] Add more portfolio/gallery sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Contact Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: designconsultantsoftampabay@gmail.com
+- **Phone**: 813-254-6113
+
+## 🎨 Design Specifications
+
+The landing page follows the original Wix design with these specifications:
+- **Colors**: Black (#000000), White (#FFFFFF), Grays (#333333, #666666, #888888)
+- **Typography**: 28-32px serif headings, 14-16px sans-serif body text
+- **Layout**: Responsive grid system with 50/50 desktop columns
+- **Spacing**: 40-60px section padding, consistent 12px form spacing
+
+## 📄 License
+
+This project is private and proprietary to Design Consultants of Tampa Bay.
