@@ -1,0 +1,103 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softShadow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12"/>
+    </filter>
+  </defs>
+  
+  <!-- Transparent background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="none"/>
+  
+  <!-- Frame: 1px black stroke with white interior, increased padding -->
+  <rect x="64" y="64" width="896" height="896" fill="white" stroke="#000000" stroke-width="2"/>
+  
+  <!-- DCTB Monogram - High resolution version -->
+  <!-- Letter D (rear, green) -->
+  <path d="M240 320 
+           L240 640 
+           L360 640 
+           C440 640 480 600 480 520 
+           L480 440 
+           C480 360 440 320 360 320 
+           Z 
+           M280 360 
+           L360 360 
+           C400 360 440 400 440 440 
+           L440 520 
+           C440 560 400 600 360 600 
+           L280 600 
+           Z" 
+        fill="#A7C957"/>
+  
+  <!-- Letter C (middle, green, overlapping D) -->
+  <path d="M400 320 
+           C320 320 280 360 280 440 
+           L280 520 
+           C280 600 320 640 400 640 
+           L480 640 
+           L480 600 
+           L400 600 
+           C360 600 320 560 320 520 
+           L320 440 
+           C320 400 360 360 400 360 
+           L480 360 
+           L480 320 
+           Z" 
+        fill="#A7C957"/>
+  
+  <!-- Letter T (front, pink) -->
+  <path d="M520 320 
+           L520 360 
+           L600 360 
+           L600 640 
+           L640 640 
+           L640 360 
+           L720 360 
+           L720 320 
+           Z" 
+        fill="#E63973"/>
+  
+  <!-- Letter B (front, pink) -->
+  <path d="M680 320 
+           L680 640 
+           L760 640 
+           C800 640 840 600 840 560 
+           C840 530 830 504 810 490 
+           C830 476 840 450 840 420 
+           C840 380 800 320 760 320 
+           Z 
+           M720 360 
+           L760 360 
+           C780 360 800 380 800 420 
+           C800 440 790 460 770 460 
+           L720 460 
+           Z 
+           M720 500 
+           L770 500 
+           C790 500 800 520 800 560 
+           C800 580 780 600 760 600 
+           L720 600 
+           Z" 
+        fill="#E63973"/>
+  
+  <!-- Soft elliptical shadow -->
+  <ellipse cx="512" cy="680" rx="200" ry="30" fill="#E63973" opacity="0.08" filter="url(#softShadow)"/>
+  
+  <!-- Typography: DESIGN CONSULTANTS -->
+  <text x="512" y="780" 
+        text-anchor="middle" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="36" 
+        font-weight="600" 
+        letter-spacing="6px" 
+        fill="#000000">DESIGN CONSULTANTS</text>
+  
+  <!-- Typography: OF TAMPA BAY -->
+  <text x="512" y="830" 
+        text-anchor="middle" 
+        font-family="Arial, Helvetica, sans-serif" 
+        font-size="26" 
+        font-weight="500" 
+        letter-spacing="5px" 
+        fill="#000000">OF TAMPA BAY</text>
+</svg>

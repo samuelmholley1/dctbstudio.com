@@ -129,18 +129,54 @@ clip: inside frame`}</pre>
             </div>
           </div>
 
-          {/* Placeholder for Current Logo */}
+          {/* Recreated Logo Display */}
           <div className="bg-white rounded-lg shadow-sm p-8 text-center">
-            <h3 className="font-serif text-xl font-semibold mb-6">Current Logo Reference</h3>
-            <div className="bg-neutral-100 border-2 border-dashed border-neutral-300 rounded-lg p-12 mb-4">
-              <p className="text-neutral-500 text-sm">
-                [Logo files to be uploaded here]<br/>
-                Awaiting vector-accurate rebuild per specifications above
+            <h3 className="font-serif text-xl font-semibold mb-6">Vector-Accurate Logo Rebuild</h3>
+            
+            {/* Logo Display */}
+            <div className="mb-8">
+              <div className="inline-block p-8 bg-neutral-50 rounded-lg">
+                <img 
+                  src="/dctb-logo-master.svg" 
+                  alt="Design Consultants of Tampa Bay - Vector Logo"
+                  className="w-64 h-64 mx-auto"
+                />
+              </div>
+            </div>
+            
+            {/* Download Options */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <h4 className="font-medium text-green-800 mb-2">✅ Master SVG</h4>
+                <p className="text-sm text-green-700 mb-3">Vector source, infinite scalability</p>
+                <a 
+                  href="/dctb-logo-master.svg" 
+                  download="dctb-logo-master.svg"
+                  className="inline-block bg-green-600 text-white px-4 py-2 rounded text-sm hover:bg-green-700 transition-colors"
+                >
+                  Download SVG
+                </a>
+              </div>
+              
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <h4 className="font-medium text-blue-800 mb-2">🌐 Web Version</h4>
+                <p className="text-sm text-blue-700 mb-3">High-res with transparency</p>
+                <a 
+                  href="/dctb-logo-web-2048.svg" 
+                  download="dctb-logo-web-2048.svg"
+                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
+                >
+                  Download Web
+                </a>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <p className="text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg p-3 inline-block">
+                <strong>✅ Vector Rebuild Complete</strong><br/>
+                Professional SVG recreation following exact brand specifications
               </p>
             </div>
-            <p className="text-xs text-neutral-500">
-              Logo will be displayed here once professional vector rebuild is complete
-            </p>
           </div>
         </div>
       </main>
