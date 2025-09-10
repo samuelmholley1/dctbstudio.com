@@ -215,7 +215,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-green-400 to-pink-400 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-green-500 hover:to-pink-500 transition-all duration-200 shadow-lg hover:shadow-xl"
+                    className="w-full bg-gray-900 text-white py-4 px-6 font-semibold text-lg hover:bg-gray-800 transition-all duration-300 border border-gray-900 hover:border-gray-800"
                   >
                     {formData.consultRequest ? 'Request Free Consultation' : 'Send Message'}
                   </button>
@@ -230,7 +230,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -243,7 +243,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
@@ -255,7 +255,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -312,19 +312,19 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Us?</h3>
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                     Free initial consultation
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                     Budget-conscious solutions
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                     Professional project management
                   </li>
                   <li className="flex items-center">
-                    <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                     10+ years of experience
                   </li>
                 </ul>

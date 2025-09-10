@@ -70,8 +70,7 @@ export default function Footer() {
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className="w-full text-white py-2 px-4 rounded-lg font-medium transition-all duration-200 disabled:opacity-50"
-                style={{ background: 'linear-gradient(135deg, #A7C957 0%, #E63973 100%)' }}
+                className="w-full bg-white text-gray-900 py-2 px-4 font-medium border border-gray-300 hover:bg-gray-50 transition-all duration-200 disabled:opacity-50"
               >
                 {isSubmitted ? 'Thanks for subscribing!' : 'Subscribe'}
               </button>

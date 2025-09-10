@@ -43,19 +43,19 @@ export default function ServicesPage() {
               </p>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li className="flex items-center">
-                  <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#A7C957' }}></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Complete home makeovers
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#A7C957' }}></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Single room designs
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#A7C957' }}></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Kitchen and bathroom remodels
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#A7C957' }}></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Color consultations
                 </li>
               </ul>
@@ -77,19 +77,19 @@ export default function ServicesPage() {
               </p>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Office space planning
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Retail environments
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Restaurant and hospitality
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Brand-aligned design
                 </li>
               </ul>
@@ -145,19 +145,19 @@ export default function ServicesPage() {
               </p>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Space planning advice
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Color and material selection
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Furniture arrangement
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
                   Budget planning
                 </li>
               </ul>
@@ -178,7 +178,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Consultation</h3>
@@ -188,7 +188,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Design</h3>
@@ -198,7 +198,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Implementation</h3>
@@ -208,7 +208,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Reveal</h3>
@@ -231,8 +231,7 @@ export default function ServicesPage() {
           </p>
           <a
             href="/contact?consult=true"
-            className="inline-block text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            style={{ background: 'linear-gradient(135deg, #A7C957 0%, #E63973 100%)' }}
+            className="inline-block bg-gray-900 text-white px-8 py-4 font-semibold text-lg hover:bg-gray-800 transition-all duration-300 border border-gray-900 hover:border-gray-800"
           >
             Schedule Your Free Consultation
           </a>

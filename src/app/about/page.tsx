@@ -128,7 +128,7 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #A7C957 0%, #E63973 100%)' }}>
+              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Client-Centered</h3>
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #A7C957 0%, #E63973 100%)' }}>
+              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Budget Conscious</h3>
