@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "../components/Navbar";
+import GlobalFooter from "../components/GlobalFooter";
 
 export const metadata: Metadata = {
   title: "Design Consultants of Tampa Bay - Creating Elegant Interiors",
@@ -15,7 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <Navbar />
+        <main>
+          {children}
+        </main>
+        <GlobalFooter />
       </body>
     </html>
   );
