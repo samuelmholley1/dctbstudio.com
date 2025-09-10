@@ -9,7 +9,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/DCTB_logo.png"
+              src="/DCTB_icon.png"
               alt="Design Consultants of Tampa Bay"
               width={40}
               height={40}

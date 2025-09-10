@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Image
-                src="/DCTB_logo.png"
+                src="/DCTB_icon.png"
                 alt="Design Consultants of Tampa Bay"
                 width={40}
                 height={40}
