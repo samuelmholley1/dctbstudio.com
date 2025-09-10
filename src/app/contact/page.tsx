@@ -102,7 +102,7 @@ export default function ContactPage() {
                   {formData.consultRequest && (
                     <div className="bg-gradient-to-r from-green-50 to-pink-50 p-4 rounded-lg border border-green-200">
                       <p className="text-sm text-green-800 font-medium">
-                        🎉 Free Consultation Request - We'll discuss your project, budget, and timeline at no cost!
+                        🎉 Free Consultation Request - We&apos;ll discuss your project, budget, and timeline at no cost!
                       </p>
                     </div>
                   )}

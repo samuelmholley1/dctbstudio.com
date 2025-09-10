@@ -39,7 +39,7 @@ export default function ServicesPage() {
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Residential Design</h2>
               <p className="text-gray-600 mb-4 flex-grow">
-                Transform your home into a reflection of your personal style. We work with you to create beautiful, functional living spaces that enhance your daily life and increase your home's value.
+                Transform your home into a reflection of your personal style. We work with you to create beautiful, functional living spaces that enhance your daily life and increase your home&apos;s value.
               </p>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li className="flex items-center">
@@ -227,7 +227,7 @@ export default function ServicesPage() {
             Ready to Transform Your Space?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's discuss your project and see how we can bring your vision to life.
+            Let&apos;s discuss your project and see how we can bring your vision to life.
           </p>
           <a
             href="/contact?consult=true"

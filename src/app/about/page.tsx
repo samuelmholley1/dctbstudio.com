@@ -35,7 +35,7 @@ export default function AboutPage() {
                 We believe that great design should be accessible to everyone, which is why we offer budget-conscious solutions without compromising on quality or style. Every project is a collaboration between our designers and our clients, ensuring that the final result truly reflects your vision.
               </p>
               <p className="text-gray-600">
-                From concept to completion, we handle every aspect of your interior design project with professionalism, attention to detail, and a commitment to excellence that has made us Tampa Bay's trusted design consultants.
+                From concept to completion, we handle every aspect of your interior design project with professionalism, attention to detail, and a commitment to excellence that has made us Tampa Bay&apos;s trusted design consultants.
               </p>
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
@@ -143,7 +143,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Budget Conscious</h3>
               <p className="text-gray-600">
-                Beautiful design shouldn't break the bank. We offer solutions for every budget without sacrificing style or quality.
+                Beautiful design shouldn&apos;t break the bank. We offer solutions for every budget without sacrificing style or quality.
               </p>
             </div>
           </div>
