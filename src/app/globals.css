@@ -1,20 +1,34 @@
 @import "tailwindcss";
 
-/* DCTB Landing Page Styles */
+/* DCTB Landing Page Styles - Following CTO Specifications */
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --background: #FAFAFA;
+  --foreground: #111111;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Custom serif font class for headings */
+/* Typography following CTO specs */
 .font-serif {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Focus rings and accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Hover underlines for links */
+a:hover {
+  text-decoration: underline;
 }
