@@ -7,8 +7,8 @@ export default function GalleryRow() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5">
           <div className="relative aspect-[4/3] rounded overflow-hidden">
             <Image
-              src="/Foyer.jpg"
-              alt="Elegant foyer design with custom finishes"
+              src="/hallway.jpg"
+              alt="Elegant hallway design showcasing architectural details"
               fill
               className="object-cover"
             />
