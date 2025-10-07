@@ -31,10 +31,10 @@ export default function ServicesPage() {
             <div className="flex flex-col">
               <div className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-6">
                 <Image
-                  src="/living-room.jpg"
+                  src="/scaffold.jpg"
                   alt="Residential interior design"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Residential Design</h2>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
             <div className="flex flex-col">
               <div className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-6">
                 <Image
-                  src="/elizabeth_workstation.avif"
+                  src="/in_progress_kitchen.jpg"
                   alt="Custom furniture design"
                   fill
                   className="object-cover"
@@ -133,7 +133,7 @@ export default function ServicesPage() {
             <div className="flex flex-col">
               <div className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-6">
                 <Image
-                  src="/hallway.jpg"
+                  src="/bedroom.jpg"
                   alt="Design consultation"
                   fill
                   className="object-cover"
