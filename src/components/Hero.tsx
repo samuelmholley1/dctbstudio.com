@@ -25,7 +25,7 @@ export default function Hero() {
             Design Consultants of Tampa Bay
           </h1>
           <p className="font-serif italic drop-shadow tracking-wide md:tracking-wider" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 1rem)' }}>
-            crafting elegant interiors since 2015
+            Crafting elegant interiors since 2015
           </p>
         </div>
       </div>
