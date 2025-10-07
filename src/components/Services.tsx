@@ -20,9 +20,9 @@ export default function Services() {
             <h2 className="font-serif text-lg md:text-xl font-bold uppercase tracking-[0.04em] mb-6 leading-tight">
               Design Consultants of<br />Tampa Bay
             </h2>
-            <p className="font-serif text-base mb-4 font-medium">
+            <h3 className="font-serif text-base md:text-lg font-semibold mb-4">
               A full service studio offering
-            </p>
+            </h3>
             <ul className="space-y-2 text-[0.92rem] leading-[1.4] text-neutral-700">
               <li>• High-end design solutions for home or office</li>
               <li>• Color & design consultation</li>

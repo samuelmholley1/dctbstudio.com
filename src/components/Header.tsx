@@ -11,12 +11,6 @@ export default function Header() {
           Design Consultants of Tampa Bay
         </Link>
         <div className="flex items-center space-x-6">
-          <Link 
-            href="/logo" 
-            className="text-xs uppercase tracking-wide hover:underline"
-          >
-            Brand
-          </Link>
           <div className="text-sm">
             813-254-6113
           </div>
