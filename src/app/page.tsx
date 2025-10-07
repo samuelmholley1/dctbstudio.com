@@ -24,7 +24,7 @@ export default function Home() {
               priority
             />
           </div>
-          <p className="text-[0.92rem] leading-[1.5] text-neutral-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Transforming spaces with exceptional interior design and consulting services throughout Tampa Bay. 
             We create beautiful, functional environments that reflect your unique style and enhance your daily life.
           </p>

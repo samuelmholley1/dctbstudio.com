@@ -23,13 +23,13 @@ export default function Services() {
             <h3 className="font-serif text-base md:text-lg font-semibold mb-4">
               A full service studio offering:
             </h3>
-            <ul className="space-y-2 text-[0.92rem] leading-[1.4] text-neutral-700">
+            <ul className="space-y-2 text-lg text-gray-600">
               <li>• High-end design solutions for home or office</li>
               <li>• Color & design consultation</li>
               <li>• Green products</li>
               <li>• Energy efficient practices</li>
             </ul>
-            <p className="mt-6 text-[0.92rem] leading-[1.5] text-neutral-700">
+            <p className="mt-6 text-lg text-gray-600">
               Design Consultants of Tampa Bay is known for crafting interiors blending modern style with intentional living, transforming residential and commercial spaces into environments that reflect individuality, elegance and comfort.
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function Services() {
             <h3 className="font-serif text-base md:text-lg font-semibold mb-4">
               Working with DC of Tampa Bay, clients can expect:
             </h3>
-            <ul className="space-y-2 text-[0.92rem] leading-[1.4] text-neutral-700">
+            <ul className="space-y-2 text-lg text-gray-600">
               <li>• Original interior design solutions</li>
               <li>• Commitment to excellence</li>
               <li>• Rewarding customer experience</li>
