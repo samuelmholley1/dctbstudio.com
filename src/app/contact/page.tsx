@@ -13,7 +13,6 @@ export default function ContactPage() {
     message: '',
     consultRequest: false
   })
-  const [isSubmitted, setIsSubmitted] = useState(false)
 
   // Check if this is a consultation request from URL params
   useEffect(() => {
@@ -23,34 +22,43 @@ export default function ContactPage() {
     }
   }, [])
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target
-    const checked = (e.target as HTMLInputElement).checked
-    
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }))
-  }
+  // Load Calendly and manage skeleton loader
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement('script')
+    script.src = 'https://assets.calendly.com/assets/external/widget.js'
+    script.async = false // Load synchronously to ensure Calendly object exists
+    document.head.appendChild(script)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        projectType: '',
-        budget: '',
-        message: '',
-        consultRequest: false
-      })
-    }, 5000)
-  }
+    // Initialize Calendly after script loads
+    script.onload = () => {
+      const skeleton = document.getElementById('skeleton-loader')
+      const embedDiv = document.getElementById('calendly-embed')
+      
+      if (skeleton && embedDiv) {
+        // Poll for iframe to load and then hide skeleton
+        const poll = () => {
+          const iframe = embedDiv.querySelector('iframe')
+          if (!iframe) {
+            requestAnimationFrame(poll)
+            return
+          }
+          iframe.addEventListener('load', () => {
+            skeleton.remove()
+          })
+        }
+        poll()
+      }
+    }
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')
+      if (existingScript) {
+        existingScript.remove()
+      }
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-white">
@@ -76,151 +84,119 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
-            {/* Contact Form */}
+            {/* Calendly Widget */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                {formData.consultRequest ? 'Consultation Request' : 'Send Us a Message'}
+                {formData.consultRequest ? 'Schedule Your Consultation' : 'Book an Appointment'}
               </h2>
               
-              {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+              {/* Calendly Container with Skeleton Loader */}
+              <div className="relative min-h-[700px] bg-white rounded-lg border border-gray-200">
+                {/* Skeleton Loader */}
+                <div id="skeleton-loader" className="absolute inset-0 z-10 flex flex-col gap-2 p-6">
+                  {/* Header */}
+                  <div className="skeleton-header mb-4">
+                    <div className="skeleton-shape h-7 w-1/3 bg-gradient-to-r from-gray-200 to-gray-300 rounded"></div>
                   </div>
-                  <h3 className="text-lg font-semibold text-green-800 mb-2">Thank You!</h3>
-                  <p className="text-green-700">
-                    {formData.consultRequest 
-                      ? 'We\'ve received your consultation request and will contact you within 24 hours to schedule your free consultation.'
-                      : 'We\'ve received your message and will get back to you as soon as possible.'
-                    }
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {formData.consultRequest && (
-                    <div className="bg-gradient-to-r from-green-50 to-pink-50 p-4 rounded-lg border border-green-200">
-                      <p className="text-sm text-green-800 font-medium">
-                        🎉 Free Consultation Request - We&apos;ll discuss your project, budget, and timeline at no cost!
-                      </p>
-                    </div>
-                  )}
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                      />
-                    </div>
+                  
+                  {/* Month Navigation */}
+                  <div className="skeleton-month-nav flex justify-between items-center mb-5 px-2">
+                    <div className="skeleton-nav-arrow w-4 h-4 rounded-full bg-gradient-to-br from-[#A7C957] to-[#8BB63C] opacity-20"></div>
+                    <div className="skeleton-shape h-5 w-1/4 bg-gradient-to-r from-[#374151] to-[#6B7280] opacity-20 rounded"></div>
+                    <div className="skeleton-nav-arrow w-4 h-4 rounded-full bg-gradient-to-br from-[#A7C957] to-[#8BB63C] opacity-20"></div>
                   </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-                        Project Type
-                      </label>
-                      <select
-                        id="projectType"
-                        name="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+                  
+                  {/* Weekdays */}
+                  <div className="skeleton-weekdays grid grid-cols-7 gap-1 mb-2 px-1">
+                    {Array.from({ length: 7 }).map((_, i) => (
+                      <div key={i} className="skeleton-weekday h-2 w-3/4 mx-auto bg-gradient-to-r from-[#6B7280] to-[#374151] opacity-25 rounded"></div>
+                    ))}
+                  </div>
+                  
+                  {/* Calendar Grid */}
+                  <div className="skeleton-calendar-grid grid grid-cols-7 gap-1 flex-grow px-1">
+                    {Array.from({ length: 42 }).map((_, i) => (
+                      <div 
+                        key={i} 
+                        className={`skeleton-date-box h-4 rounded border relative overflow-hidden ${
+                          i % 7 === 2 || i % 7 === 5 
+                            ? 'bg-gradient-to-br from-[#E63973]/8 to-[#E63973]/4 border-[#E63973]/15' 
+                            : 'bg-gradient-to-br from-gray-50 to-gray-200 border-[#374151]/8'
+                        }`}
                       >
-                        <option value="">Select a project type</option>
-                        <option value="residential-full">Complete Home Design</option>
-                        <option value="residential-room">Single Room Design</option>
-                        <option value="commercial">Commercial Space</option>
-                        <option value="consultation">Design Consultation</option>
-                        <option value="custom-furniture">Custom Furniture</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
+                        <div 
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A7C957]/10 to-transparent animate-pulse"
+                          style={{ 
+                            animation: `shimmer 3s infinite ease-in-out ${i * 0.1}s`,
+                            left: '-100%',
+                            animationName: 'shimmer'
+                          }}
+                        ></div>
+                      </div>
+                    ))}
                   </div>
-
-                  <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Budget
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                    >
-                      <option value="">Select a budget range</option>
-                      <option value="under-10k">Under $10,000</option>
-                      <option value="10k-25k">$10,000 - $25,000</option>
-                      <option value="25k-50k">$25,000 - $50,000</option>
-                      <option value="50k-100k">$50,000 - $100,000</option>
-                      <option value="over-100k">Over $100,000</option>
-                      <option value="consultation-only">Consultation Only</option>
-                    </select>
+                  
+                  {/* Footer */}
+                  <div className="skeleton-footer mt-7 px-2">
+                    <div className="skeleton-shape h-3 w-full bg-gradient-to-r from-[#6B7280] to-[#374151] opacity-20 rounded"></div>
                   </div>
+                </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Tell Us About Your Project *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Describe your vision, timeline, and any specific requirements..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
-                    />
-                  </div>
+                {/* Calendly inline widget */}
+                <div id="calendly-embed" className="calendly-inline-widget" data-url="https://calendly.com/elizabeth-dctbstudio/30min?text_color=374151&primary_color=a7c957" style={{minWidth:'320px',height:'700px'}}></div>
+              </div>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-gray-900 text-white py-4 px-6 font-semibold text-lg hover:bg-gray-800 transition-all duration-300 border border-gray-900 hover:border-gray-800"
-                  >
-                    {formData.consultRequest ? 'Request Free Consultation' : 'Send Message'}
-                  </button>
-                </form>
-              )}
+              {/* CSS Animations */}
+              <style dangerouslySetInnerHTML={{ __html: `
+                @keyframes shimmer {
+                  0% { left: -100%; }
+                  100% { left: 100%; }
+                }
+                
+                .skeleton-shape {
+                  position: relative;
+                  overflow: hidden;
+                  background: linear-gradient(
+                    45deg,
+                    rgba(167, 201, 87, 0.1) 0%,
+                    rgba(167, 201, 87, 0.25) 50%,
+                    rgba(167, 201, 87, 0.1) 100%
+                  );
+                }
+                
+                .skeleton-shape::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: -100%;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(
+                    45deg,
+                    transparent 30%,
+                    rgba(167, 201, 87, 0.1) 50%,
+                    transparent 70%
+                  );
+                  animation: skeleton-shimmer 3s infinite ease-in-out;
+                }
+                
+                @keyframes skeleton-shimmer {
+                  0% { left: -100%; }
+                  100% { left: 100%; }
+                }
+                
+                .calendly-placeholder {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                  min-height: 400px;
+                }
+                
+                #calendly-embed {
+                  min-width: 220px;
+                  width: 100%;
+                }
+              ` }} />
             </div>
 
             {/* Contact Info & Gallery */}
