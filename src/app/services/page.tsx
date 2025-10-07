@@ -15,7 +15,7 @@ export default function ServicesPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Services
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               From complete home makeovers to single room refreshes, we offer comprehensive interior design services tailored to your needs and budget.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
             <div className="flex flex-col">
               <div className="relative h-64 rounded-lg overflow-hidden shadow-lg mb-6">
                 <Image
-                  src="/bedroom.jpg"
+                  src="/dining_room.jpg"
                   alt="Design consultation"
                   fill
                   className="object-cover"
@@ -178,7 +178,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
+              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200" style={{ backgroundColor: '#A7C957' }}>
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Consultation</h3>
@@ -188,7 +188,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
+              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200" style={{ backgroundColor: '#E63973' }}>
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Design</h3>
@@ -198,7 +198,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
+              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200" style={{ backgroundColor: '#6B7280' }}>
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Implementation</h3>
@@ -208,7 +208,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200">
+              <div className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center border-2 border-gray-200" style={{ backgroundColor: '#374151' }}>
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Reveal</h3>
@@ -235,6 +235,18 @@ export default function ServicesPage() {
           >
             Schedule Your Free Consultation
           </a>
+          
+          {/* Bedroom Image */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/bedroom.jpg"
+                alt="Beautiful bedroom showcasing our design results"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>
