@@ -71,9 +71,9 @@ export default function ServicesPage() {
                   className="object-cover"
                 />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Commercial Design</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Office & Workspace Design</h2>
               <p className="text-gray-600 mb-4 flex-grow">
-                Create professional environments that inspire productivity and impress clients. Our commercial design services help businesses make a lasting impression through thoughtful interior design.
+                Create professional office environments that inspire productivity and impress clients. Our workspace design services help businesses optimize their work environments through thoughtful interior design.
               </p>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li className="flex items-center">
@@ -82,15 +82,15 @@ export default function ServicesPage() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                  Retail environments
+                  Workspace optimization
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                  Restaurant and hospitality
+                  Conference & meeting rooms
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                  Brand-aligned design
+                  Professional brand alignment
                 </li>
               </ul>
             </div>

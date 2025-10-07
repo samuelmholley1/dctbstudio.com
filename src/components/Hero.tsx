@@ -16,12 +16,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10"></div>
       
       {/* Centered overlay content */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center md:items-start md:pt-[20%]">
         <div className="text-center text-white px-4">
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.06em] font-bold drop-shadow-lg mb-3">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.06em] md:tracking-[0.03em] lg:tracking-[0.02em] font-bold drop-shadow-lg mb-3">
             Design Consultants of Tampa Bay
           </h1>
-          <p className="font-serif text-[0.85rem] md:text-sm lg:text-base italic drop-shadow">
+          <p className="font-serif text-[0.85rem] md:text-sm lg:text-base italic drop-shadow tracking-wide md:tracking-wider">
             Creating elegant interiors
           </p>
         </div>

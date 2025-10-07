@@ -29,7 +29,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Founded with a vision to bring exceptional interior design to Tampa Bay, Design Consultants has been transforming homes and commercial spaces for over a decade. Our team combines creativity with functionality to deliver spaces that are both beautiful and livable.
+                Founded with a vision to bring exceptional interior design to Tampa Bay, Design Consultants has been transforming homes and office spaces for over a decade. Our team combines creativity with functionality to deliver spaces that are both beautiful and functional.
               </p>
               <p className="text-gray-600 mb-4">
                 We believe that great design should be accessible to everyone, which is why we offer budget-conscious solutions without compromising on quality or style. Every project is a collaboration between our designers and our clients, ensuring that the final result truly reflects your vision.
