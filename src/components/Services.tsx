@@ -21,7 +21,7 @@ export default function Services() {
               Design Consultants of<br />Tampa Bay
             </h2>
             <h3 className="font-serif text-base md:text-lg font-semibold mb-4">
-              A full service studio offering
+              A full service studio offering:
             </h3>
             <ul className="space-y-2 text-[0.92rem] leading-[1.4] text-neutral-700">
               <li>• High-end design solutions for home or office</li>
@@ -41,7 +41,7 @@ export default function Services() {
         <div className="grid grid-cols-12 gap-x-8 items-start">
           <div className="col-span-12 md:col-span-6 mb-8 md:mb-0">
             <h3 className="font-serif text-base md:text-lg font-semibold mb-4">
-              Working with DC of Tampa Bay, clients can expect
+              Working with DC of Tampa Bay, clients can expect:
             </h3>
             <ul className="space-y-2 text-[0.92rem] leading-[1.4] text-neutral-700">
               <li>• Original interior design solutions</li>
