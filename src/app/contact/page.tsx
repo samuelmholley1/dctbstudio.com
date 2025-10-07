@@ -91,7 +91,7 @@ export default function ContactPage() {
               </h2>
               
               {/* Calendly Container with Skeleton Loader */}
-              <div className="relative min-h-[700px] bg-white rounded-lg border border-gray-200">
+              <div className="relative max-w-md mx-auto min-h-[400px] bg-white rounded-lg border border-gray-200">
                 {/* Skeleton Loader */}
                 <div id="skeleton-loader" className="absolute inset-0 z-10 flex flex-col gap-2 p-6">
                   {/* Header */}
@@ -143,7 +143,13 @@ export default function ContactPage() {
                 </div>
 
                 {/* Calendly inline widget */}
-                <div id="calendly-embed" className="calendly-inline-widget" data-url="https://calendly.com/elizabeth-dctbstudio/30min?text_color=374151&primary_color=a7c957" style={{minWidth:'320px',height:'700px'}}></div>
+                <div 
+                  id="calendly-embed" 
+                  className="calendly-inline-widget" 
+                  data-url="https://calendly.com/elizabeth-dctbstudio/30min?text_color=374151&primary_color=a7c957"
+                  data-resize="true"
+                  style={{ minWidth: '320px' }}
+                ></div>
               </div>
 
               {/* CSS Animations */}
