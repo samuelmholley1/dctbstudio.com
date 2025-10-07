@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto">
         <Image
           src="/Hero-image.jpg"
@@ -21,11 +21,11 @@ export default function Hero() {
       {/* Centered overlay content with proper bounds */}
       <div className="absolute inset-0 flex items-start justify-center pt-[10%] px-[15%]">
         <div className="text-center text-white w-full">
-          <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl uppercase tracking-[0.06em] md:tracking-[0.03em] lg:tracking-[0.02em] font-bold drop-shadow-lg mb-3 leading-tight">
+          <h1 className="font-serif uppercase tracking-[0.06em] md:tracking-[0.03em] lg:tracking-[0.02em] font-bold drop-shadow-lg mb-3 leading-tight whitespace-nowrap" style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)' }}>
             Design Consultants of Tampa Bay
           </h1>
-          <p className="font-serif text-sm md:text-base lg:text-lg italic drop-shadow tracking-wide md:tracking-wider">
-            Creating elegant interiors
+          <p className="font-serif italic drop-shadow tracking-wide md:tracking-wider" style={{ fontSize: 'clamp(0.75rem, 1.2vw, 1rem)' }}>
+            crafting elegant interiors since 2015
           </p>
         </div>
       </div>
